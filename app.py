@@ -3,7 +3,7 @@ from flask import render_template,request
 import textblob
 import google.generativeai as genai
 import os
-api = os.getenv("makersuite")
+api1 = os.getenv("makersuite")
 
 app = Flask(__name__)
 
@@ -32,7 +32,7 @@ def genAI():
 
 @app.route("/genAI_result",methods=["GET","POST"])
 def genAI_result():
-    genai.configure(api_key=api)
+    genai.configure(api_key=api1)
     model = genai.GenerativeModel("gemini-1.5-flash")
     q = request.form.get("q")
     r = model.generate_content(q)
