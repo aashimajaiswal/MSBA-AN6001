@@ -1,5 +1,5 @@
 flask
 gunicorn
 textblob
-google.generativeai
+google-generativeai
 os
